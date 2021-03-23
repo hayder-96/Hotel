@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class reservation extends Model
+{
+    use HasFactory;
+
+   
+
+    protected $fillable = [
+
+        'name',
+        'phone',
+        'email',
+        'country',
+        'typetrip',
+        'nameroom',
+        'access',
+        'leaving',
+        'user_id',
+        'typeroom',
+        'nameroom',
+        'priceroom',
+        'typebed',
+        'numbed',
+        'numguest',
+        "admin_id"
+    ];
+
+
+}
