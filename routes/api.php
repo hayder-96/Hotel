@@ -49,6 +49,10 @@ Route::middleware('admin:admin')->group(function(){
 
     Route::resource('hotelimage',ImageroomController::class);
 
+    Route::post('upimage',[ImageroomController::class,'updatee']);
+
+
+
 
     Route::get('getimage/{id}',[ImageroomController::class,'indexx']);
 
@@ -94,7 +98,6 @@ Route::middleware('auth:api')->group(function(){
     Route::get('com/{id}',[CommentController::class,'indexx']);
 
 
-    Route::post('upcom',[CommentController::class,'updatee']);
 
 
 

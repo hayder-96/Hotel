@@ -12,6 +12,7 @@ class ImageroomController extends BaseController
     public function indexx($id)
     {
         $hotel=imageroom::all()->where('image_id',$id);
+        return $this->Respone($hotel,200);
     }
 
    
@@ -33,13 +34,13 @@ class ImageroomController extends BaseController
         }
 
         
-        // $path= Cloudinary::upload($request->file('image')->getRealPath(),
+        $path= Cloudinary::upload($request->file('image')->getRealPath(),
 
-        // array("public_id" =>$request->name,"quality"=>'auto'))->getSecurePath();
+        array("public_id" =>$request->name,"quality"=>'auto'))->getSecurePath();
         
       
       
-        // $input['image']=$path;
+        $input['image']=$path;
       
         $hotel=imageroom::create($input);
 
@@ -75,9 +76,51 @@ class ImageroomController extends BaseController
      * @param  \App\Models\imageroom  $imageroom
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, imageroom $imageroom)
+    public function updatee(Request $request)
     {
-        //
+        
+
+        $uss=imageroom::find($request->id);
+        $input=$request->all();
+
+        $valdit=Validator::make($request->all(),[
+
+            'image'=>'required',
+           
+        ]);
+
+        if($valdit->fails()){
+
+            return $this->sendError('Failed input',$valdit->errors());
+        }
+
+        
+
+        if($request->image!=null){
+        
+    
+            $path= Cloudinary::upload($request->file('image')->getRealPath(),
+            array("public_id" =>$request->name,"quality"=>'auto'))->getSecurePath();
+            
+          }
+       
+       
+
+        if($request->image!=null){
+
+            $uss->image=$path;
+        }
+        $uss->save();
+
+        return $this->Respone($uss,'Success update');
+
+
+
+
+
+
+
+
     }
 
     /**

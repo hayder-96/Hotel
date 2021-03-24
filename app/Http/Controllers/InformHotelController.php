@@ -37,37 +37,37 @@ class InformHotelController extends BaseController
 
         $valdit=Validator::make($request->all(),[
 
-            'namehotel',
-            'evaluation',
+            // 'namehotel',
+            // 'evaluation',
             'image1',
             'image2',
             'image3',
-            'manger',
-            'number',
-            'country',
-            'city',
-            'latitude',
-            'longtude',
-            'typeroom',
-            'nameroom',
-            'priceroom',
-            'typebed',
-            'numbed',
-            'numguest',
-            'Facilities',
-            'meansofcomfort',
-            'typeroom',
-            'nameroom',
-            'priceroom',
-            'typebed',
-            'numbed',
-            'numguest',
-            'Facilities',
-            'meansofcomfort',
-            'kids',
-            'animals',
-            'access',
-            'breckfast'
+            // 'manger',
+            // 'number',
+            // 'country',
+            // 'city',
+            // 'latitude',
+            // 'longtude',
+            // 'typeroom',
+            // 'nameroom',
+            // 'priceroom',
+            // 'typebed',
+            // 'numbed',
+            // 'numguest',
+            // 'Facilities',
+            // 'meansofcomfort',
+            // 'typeroom',
+            // 'nameroom',
+            // 'priceroom',
+            // 'typebed',
+            // 'numbed',
+            // 'numguest',
+            // 'Facilities',
+            // 'meansofcomfort',
+            // 'kids',
+            // 'animals',
+            // 'access',
+            // 'breckfast'
         ]);
 
         if($valdit->fails()){
@@ -82,23 +82,23 @@ class InformHotelController extends BaseController
        
         
     
-            // $path1= Cloudinary::upload($request->file('image1')->getRealPath(),
+            $path1= Cloudinary::upload($request->file('image1')->getRealPath(),
     
-            // array("public_id" =>$request->name,"quality"=>'auto'))->getSecurePath();
+            array("public_id" =>$request->name1,"quality"=>'auto'))->getSecurePath();
             
-            // $path2= Cloudinary::upload($request->file('image2')->getRealPath(),
+            $path2= Cloudinary::upload($request->file('image2')->getRealPath(),
     
-            // array("public_id" =>$request->name,"quality"=>'auto'))->getSecurePath();
+            array("public_id" =>$request->name2,"quality"=>'auto'))->getSecurePath();
             
-            // $path3= Cloudinary::upload($request->file('image3')->getRealPath(),
+            $path3= Cloudinary::upload($request->file('image3')->getRealPath(),
     
-            // array("public_id" =>$request->name,"quality"=>'auto'))->getSecurePath();
+            array("public_id" =>$request->name3,"quality"=>'auto'))->getSecurePath();
             
 
 
-            // $input['image1']=$path1;
-            // $input['image2']=$path2;
-            // $input['image3']=$path3;
+            $input['image1']=$path1;
+            $input['image2']=$path2;
+            $input['image3']=$path3;
        
 
 
@@ -125,24 +125,24 @@ class InformHotelController extends BaseController
         
     
             
-            $path1= Cloudinary::upload($request->file('image')->getRealPath(),
-            array("public_id" =>$request->name.'1',"quality"=>'auto'))->getSecurePath();
+            $path1= Cloudinary::upload($request->file('image1')->getRealPath(),
+            array("public_id" =>$request->name1,"quality"=>'auto'))->getSecurePath();
             
           }
 
           if($request->image2!=null){
         
     
-            $path2= Cloudinary::upload($request->file('image')->getRealPath(),
-            array("public_id" =>$request->name.'2',"quality"=>'auto'))->getSecurePath();
+            $path2= Cloudinary::upload($request->file('image2')->getRealPath(),
+            array("public_id" =>$request->name2,"quality"=>'auto'))->getSecurePath();
             
           }
 
           if($request->image3!=null){
         
     
-            $path3= Cloudinary::upload($request->file('image')->getRealPath(),
-            array("public_id" =>$request->name.'3',"quality"=>'auto'))->getSecurePath();
+            $path3= Cloudinary::upload($request->file('image3')->getRealPath(),
+            array("public_id" =>$request->name3,"quality"=>'auto'))->getSecurePath();
             
           }
 
@@ -163,26 +163,26 @@ class InformHotelController extends BaseController
 
 
 
-       $hotel->namehotel=$request->namehotel;
-       $hotel->evaluation=$request->evaluation;
-       $hotel->manger=$request->manger;
-       $hotel->number-$request->number;
-       $hotel->country=$request->country;
-       $hotel->city=$request->city;
-       $hotel->latitude=$request->latitude;
-       $hotel->longtude=$request->longtude;
-      $hotel->typeroom=$request->typeroom;
-       $hotel->nameroom=$request->nameroom;
-       $hotel->priceroom=$request->priceroom;
-       $hotel->typebed=$request->typebed;
-       $hotel->numbed=$request->numbed;
-       $hotel->numguest=$request->numguest;
-       $hotel->Facilities=$request->Facilities;
-       $hotel->meansofcomfort=$request->meansofcomfort;
-       $hotel->kids=$request->kids;
-       $hotel->animals=$request->animals;
-       $hotel->access=$request->access;
-       $hotel->breckfast=$request->breckfast;
+    //    $hotel->namehotel=$request->namehotel;
+    //    $hotel->evaluation=$request->evaluation;
+    //    $hotel->manger=$request->manger;
+    //    $hotel->number-$request->number;
+    //    $hotel->country=$request->country;
+    //    $hotel->city=$request->city;
+    //    $hotel->latitude=$request->latitude;
+    //    $hotel->longtude=$request->longtude;
+    //    $hotel->typeroom=$request->typeroom;
+    //    $hotel->nameroom=$request->nameroom;
+    //    $hotel->priceroom=$request->priceroom;
+    //    $hotel->typebed=$request->typebed;
+    //    $hotel->numbed=$request->numbed;
+    //    $hotel->numguest=$request->numguest;
+    //    $hotel->Facilities=$request->Facilities;
+    //    $hotel->meansofcomfort=$request->meansofcomfort;
+    //    $hotel->kids=$request->kids;
+    //    $hotel->animals=$request->animals;
+    //    $hotel->access=$request->access;
+    //    $hotel->breckfast=$request->breckfast;
 
        $hotel->save();
 

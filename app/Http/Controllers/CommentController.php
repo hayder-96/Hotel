@@ -36,6 +36,7 @@ class CommentController extends BaseController
         }
 
 
+       
         
       
         $hotel=comment::create($input);
@@ -53,27 +54,15 @@ class CommentController extends BaseController
     }
 
     
-    public function updatee(Request $request)
+    public function update(Request $request,$id)
     {
         
-        $hotel=comment::find($request->id);
+        $hotel=comment::find($id);
 
 
 
-        if($request->image!=null){
-        
     
-            $path= Cloudinary::upload($request->file('image')->getRealPath(),
-            array("public_id" =>$request->name,"quality"=>'auto'))->getSecurePath();
-            
-          }
-       
     
-
-        if($request->image!=null){
-
-            $hotel->image=$path;
-        }
 
         $hotel->name=$request->name;
         $hotel->content=$request->content;
