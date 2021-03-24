@@ -48,42 +48,42 @@ return [
 
 
         
-   'mysql' => [
-        'driver' => 'mysql',
-        'host' => 'us-cdbr-east-03.cleardb.com',
-        'database' => 'heroku_e2694fcd1952c58',
-        'username' => 'bdc292e464a9cb',
-        'password' => 'b3742bde',
-        'charset' => 'utf8mb4',
-        'collation' => 'utf8mb4_unicode_ci',
-        'prefix' => '',
-        'strict' => false,
-      ],
+//    'mysql' => [
+//         'driver' => 'mysql',
+//         'host' => 'us-cdbr-east-03.cleardb.com',
+//         'database' => 'heroku_e2694fcd1952c58',
+//         'username' => 'bdc292e464a9cb',
+//         'password' => 'b3742bde',
+//         'charset' => 'utf8mb4',
+//         'collation' => 'utf8mb4_unicode_ci',
+//         'prefix' => '',
+//         'strict' => false,
+//       ],
 
 
 
 
 
 
-        // 'mysql' => [
-        //     'driver' => 'mysql',
-        //     'url' => env('DATABASE_URL'),
-        //     'host' => env('DB_HOST', '127.0.0.1'),
-        //     'port' => env('DB_PORT', '3306'),
-        //     'database' =>'hotel',
-        //     'username' =>'messi',
-        //     'password' =>'nymar',
-        //     'unix_socket' => env('DB_SOCKET', ''),
-        //     'charset' => 'utf8mb4',
-        //     'collation' => 'utf8mb4_unicode_ci',
-        //     'prefix' => '',
-        //     'prefix_indexes' => true,
-        //     'strict' => true,
-        //     'engine' => null,
-        //     'options' => extension_loaded('pdo_mysql') ? array_filter([
-        //         PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-        //     ]) : [],
-        //     ],
+        'mysql' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' =>'hotel',
+            'username' =>'messi',
+            'password' =>'nymar',
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+            ],
 
         'pgsql' => [
             'driver' => 'pgsql',

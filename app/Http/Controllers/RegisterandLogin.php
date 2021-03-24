@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\BaseController;
 use App\Models\Admin;
+use Illuminate\Support\Facades\Crypt;
 use Exception;
 use Laravel\Passport\Passport;
 
@@ -38,7 +39,7 @@ class RegisterandLogin extends BaseController{
 
     
 
-    $input['password']= Hash::make($input['password']);
+    $input['password']= Crypt::encrypt( $input['password']);
    
     $user=User::create($input);
      $success['token']=$user->createToken('hx/.<["kdkjvc823=-)c')->accessToken;
@@ -63,14 +64,21 @@ public function Login(Request $request){
 
     ]);
    
-    if( Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+    $user=User::where('email',$request->email)->first();
+    $users=crypt::decrypt($user->password);
 
-        $user=Auth::user();
+   
+    if($users===$request->password && $user->email===$request->email){
+        try{
+     $succes['token']=$user->createToken(';ejhih/><{+876yk')->accessToken;
 
-         
-        $success['token']=$user->createToken('hx/.<["kdkjvc823=-)c')->accessToken;
+     }catch(Exception $e){
 
-            return $this->Respone($success,"تم الدخول");
+         return $this->Respone($e,$succes);
+
+     }
+         return $this->Respone($succes,$users);
+
 
 
     }else{
@@ -115,7 +123,7 @@ public function Registeradmin(Request $request){
 
     
 
-    $input['password']= Hash::make($input['password']);
+    $input['password']= Crypt::encrypt( $input['password']);
    
     $user=Admin::create($input);
      $success['token']=$user->createToken(';ejhih/><{+876yk')->accessToken;
@@ -140,14 +148,20 @@ public function Loginadmin(Request $request){
 
     ]);
    
-    if( Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+    $user=Admin::where('email',$request->email)->first();
+    $users=crypt::decrypt($user->password);
 
-        $user=Auth::user();
+   
+    if($users===$request->password && $user->email===$request->email){
+        try{
+     $succes['token']=$user->createToken(';ejhih/><{+876yk')->accessToken;
 
-         
-        $success['token']=$user->createToken(';ejhih/><{+876yk')->accessToken;
+     }catch(Exception $e){
 
-            return $this->Respone($success,"تم الدخول");
+         return $this->Respone($e,$succes);
+
+     }
+         return $this->Respone($succes,$users);
 
 
     }else{
