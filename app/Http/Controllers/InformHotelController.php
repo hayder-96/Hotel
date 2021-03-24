@@ -37,37 +37,37 @@ class InformHotelController extends BaseController
 
         $valdit=Validator::make($request->all(),[
 
-            // 'namehotel',
-            // 'evaluation',
+            'namehotel',
+            'evaluation',
             'image1',
             'image2',
             'image3',
-            // 'manger',
-            // 'number',
-            // 'country',
-            // 'city',
-            // 'latitude',
-            // 'longtude',
-            // 'typeroom',
-            // 'nameroom',
-            // 'priceroom',
-            // 'typebed',
-            // 'numbed',
-            // 'numguest',
-            // 'Facilities',
-            // 'meansofcomfort',
-            // 'typeroom',
-            // 'nameroom',
-            // 'priceroom',
-            // 'typebed',
-            // 'numbed',
-            // 'numguest',
-            // 'Facilities',
-            // 'meansofcomfort',
-            // 'kids',
-            // 'animals',
-            // 'access',
-            // 'breckfast'
+            'manger',
+            'number',
+            'country',
+            'city',
+            'latitude',
+            'longtude',
+            'typeroom',
+            'nameroom',
+            'priceroom',
+            'typebed',
+            'numbed',
+            'numguest',
+            'Facilities',
+            'meansofcomfort',
+            'typeroom',
+            'nameroom',
+            'priceroom',
+            'typebed',
+            'numbed',
+            'numguest',
+            'Facilities',
+            'meansofcomfort',
+            'kids',
+            'animals',
+            'access',
+            'breckfast'
         ]);
 
         if($valdit->fails()){
@@ -163,26 +163,26 @@ class InformHotelController extends BaseController
 
 
 
-    //    $hotel->namehotel=$request->namehotel;
-    //    $hotel->evaluation=$request->evaluation;
-    //    $hotel->manger=$request->manger;
-    //    $hotel->number-$request->number;
-    //    $hotel->country=$request->country;
-    //    $hotel->city=$request->city;
-    //    $hotel->latitude=$request->latitude;
-    //    $hotel->longtude=$request->longtude;
-    //    $hotel->typeroom=$request->typeroom;
-    //    $hotel->nameroom=$request->nameroom;
-    //    $hotel->priceroom=$request->priceroom;
-    //    $hotel->typebed=$request->typebed;
-    //    $hotel->numbed=$request->numbed;
-    //    $hotel->numguest=$request->numguest;
-    //    $hotel->Facilities=$request->Facilities;
-    //    $hotel->meansofcomfort=$request->meansofcomfort;
-    //    $hotel->kids=$request->kids;
-    //    $hotel->animals=$request->animals;
-    //    $hotel->access=$request->access;
-    //    $hotel->breckfast=$request->breckfast;
+       $hotel->namehotel=$request->namehotel;
+       $hotel->evaluation=$request->evaluation;
+       $hotel->manger=$request->manger;
+       $hotel->number-$request->number;
+       $hotel->country=$request->country;
+       $hotel->city=$request->city;
+       $hotel->latitude=$request->latitude;
+       $hotel->longtude=$request->longtude;
+       $hotel->typeroom=$request->typeroom;
+       $hotel->nameroom=$request->nameroom;
+       $hotel->priceroom=$request->priceroom;
+       $hotel->typebed=$request->typebed;
+       $hotel->numbed=$request->numbed;
+       $hotel->numguest=$request->numguest;
+       $hotel->Facilities=$request->Facilities;
+       $hotel->meansofcomfort=$request->meansofcomfort;
+       $hotel->kids=$request->kids;
+       $hotel->animals=$request->animals;
+       $hotel->access=$request->access;
+       $hotel->breckfast=$request->breckfast;
 
        $hotel->save();
 
