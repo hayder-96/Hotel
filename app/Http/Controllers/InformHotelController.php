@@ -39,9 +39,9 @@ class InformHotelController extends BaseController
 
             'namehotel',
             'evaluation',
-            'image1',
-            'image2',
-            'image3',
+            // 'image1',
+            // 'image2',
+            // 'image3',
             'manger',
             'number',
             'country',
@@ -74,6 +74,7 @@ class InformHotelController extends BaseController
        
         
     
+        if($request->image1!=null && $request->image2!=null && $request->image3!=null){
             $path1= Cloudinary::upload($request->file('image1')->getRealPath(),
     
             array("public_id" =>$request->name1,"quality"=>'auto'))->getSecurePath();
@@ -92,7 +93,12 @@ class InformHotelController extends BaseController
             $input['image2']=$path2;
             $input['image3']=$path3;
        
+        }else{
+            $input['image1']='no';
+            $input['image2']='no';
+            $input['image3']='no';
 
+        }
 
         $hotel=InformHotel::create($input);
 
