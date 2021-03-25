@@ -16,7 +16,7 @@ class InformHotelController extends BaseController
     public function index()
     {
         
-        $hotel=InformHotel::all();
+        $hotel=InformHotel::all()->where('admin_id',Auth::id());
         return $this->Respone($hotel,200);
     }
 
