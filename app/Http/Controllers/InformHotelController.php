@@ -48,18 +48,8 @@ class InformHotelController extends BaseController
             'city',
             'latitude',
             'longtude',
-            'typeroom',
-            'nameroom',
-            'priceroom',
-            'typebed',
-            'numbed',
-            'numguest',
-            'Facilities',
-            'meansofcomfort',
-            'kids',
-            'animals',
-            'access',
-            'breckfast'
+            'email'
+           
         ]);
 
         if($valdit->fails()){
@@ -89,40 +79,15 @@ class InformHotelController extends BaseController
             
 
 
-            $path4= Cloudinary::upload($request->file('imageroom1')->getRealPath(),
-    
-            array("public_id" =>$request->name4,"quality"=>'auto'))->getSecurePath();
-            
-
-            $path5= Cloudinary::upload($request->file('imageroom2')->getRealPath(),
-    
-            array("public_id" =>$request->name5,"quality"=>'auto'))->getSecurePath();
-            
-
-
-            $path6= Cloudinary::upload($request->file('imageroom3')->getRealPath(),
-    
-            array("public_id" =>$request->name6,"quality"=>'auto'))->getSecurePath();
-            
-
-
-
+        
 
 
             $input['image1']=$path1;
             $input['image2']=$path2;
             $input['image3']=$path3;
-            $input['imageroom1']=$path4;
-            $input['imageroom2']=$path5;
-            $input['imageroom3']=$path6;
+           
        
-        }else{
-            $input['image1']='no';
-            $input['image2']='no';
-            $input['image3']='no';
-
         }
-
         $hotel=InformHotel::create($input);
 
         return $this->Respone($hotel,'Success input');
@@ -169,34 +134,7 @@ class InformHotelController extends BaseController
 
 
 
-
-          if($request->imageroom1!=null){
-        
-    
-            $path4= Cloudinary::upload($request->file('imageroom1')->getRealPath(),
-            array("public_id" =>$request->name4,"quality"=>'auto'))->getSecurePath();
-            
-          }
-
-
-
-          if($request->imageroom2!=null){
-        
-    
-            $path5= Cloudinary::upload($request->file('imageroom2')->getRealPath(),
-            array("public_id" =>$request->name5,"quality"=>'auto'))->getSecurePath();
-            
-          }
-
-
-
-          if($request->imageroom3!=null){
-        
-    
-            $path6= Cloudinary::upload($request->file('imageroom3')->getRealPath(),
-            array("public_id" =>$request->name6,"quality"=>'auto'))->getSecurePath();
-            
-          }
+          
 
         if($request->image1!=null){
 
@@ -217,24 +155,7 @@ class InformHotelController extends BaseController
         
 
 
-        if($request->imageroom1!=null){
-
-            $hotel->imageroom1=$path4;
-        }
-
-        if($request->imageroom2!=null){
-
-            $hotel->imageroom2=$path5;
-        }
-
-        if($request->imageroom3!=null){
-
-            $hotel->imageroom3=$path6;
-        }
-
-
-
-
+      
 
        $hotel->namehotel=$request->namehotel;
        $hotel->evaluation=$request->evaluation;
@@ -244,18 +165,7 @@ class InformHotelController extends BaseController
        $hotel->city=$request->city;
        $hotel->latitude=$request->latitude;
        $hotel->longtude=$request->longtude;
-       $hotel->typeroom=$request->typeroom;
-       $hotel->nameroom=$request->nameroom;
-       $hotel->priceroom=$request->priceroom;
-       $hotel->typebed=$request->typebed;
-       $hotel->numbed=$request->numbed;
-       $hotel->numguest=$request->numguest;
-       $hotel->Facilities=$request->Facilities;
-       $hotel->meansofcomfort=$request->meansofcomfort;
-       $hotel->kids=$request->kids;
-       $hotel->animals=$request->animals;
-       $hotel->access=$request->access;
-       $hotel->breckfast=$request->breckfast;
+    
 
        $hotel->save();
 

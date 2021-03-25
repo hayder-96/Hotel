@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DescriptionController;
+use App\Http\Controllers\DetailsHotelController;
 use App\Http\Controllers\ImageroomController;
 use App\Http\Controllers\InformHotelController;
 use Illuminate\Http\Request;
@@ -47,14 +48,14 @@ Route::middleware('admin:admin')->group(function(){
 
     Route::post('upinfo',[InformHotelController::class,'updatee']);
 
-    Route::resource('hotelimage',ImageroomController::class);
+    Route::resource('details',DetailsHotelController::class);
 
-    Route::post('upimage',[ImageroomController::class,'updatee']);
-
-
+    Route::post('updetails',[DetailsHotelController::class,'updatee']);
 
 
-    Route::get('getimage/{id}',[ImageroomController::class,'indexx']);
+
+
+    Route::get('getdetail/{id}',[DetailsHotelController::class,'indexx']);
 
 
     Route::get('getusers/{id}',[InformHotelController::class,'indexxx']);

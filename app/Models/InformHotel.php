@@ -25,20 +25,6 @@ class InformHotel extends Model
         'latitude',
         'longtude',
         'admin_id',
-        'typeroom',
-        'nameroom',
-        'priceroom',
-            'typebed',
-            'numbed',
-            'numguest',
-            'Facilities',
-            'meansofcomfort',
-            'kids',
-            'animals',
-            'access',
-            'breckfast',
-            'imageroom1',
-            'imageroom2',
-            'imageroom3'
+        'email'
     ];
 }
