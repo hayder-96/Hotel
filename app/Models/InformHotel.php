@@ -36,6 +36,9 @@ class InformHotel extends Model
             'kids',
             'animals',
             'access',
-            'breckfast'
+            'breckfast',
+            'imageroom1',
+            'imageroom2',
+            'imageroom3'
     ];
 }

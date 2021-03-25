@@ -20,6 +20,9 @@ class CreateInformHotelsTable extends Migration
             $table->string('image1');
             $table->string('image2');
             $table->string('image3');
+            $table->string('imageroom1');
+            $table->string('imageroom2');
+            $table->string('imageroom3');
             $table->string('manger');
             $table->string('number');
             $table->string('country');

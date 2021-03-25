@@ -72,7 +72,7 @@ class InformHotelController extends BaseController
 
 
        
-        
+       
     
         if($request->image1!=null && $request->image2!=null && $request->image3!=null){
             $path1= Cloudinary::upload($request->file('image1')->getRealPath(),
@@ -89,9 +89,32 @@ class InformHotelController extends BaseController
             
 
 
+            $path4= Cloudinary::upload($request->file('imageroom1')->getRealPath(),
+    
+            array("public_id" =>$request->name4,"quality"=>'auto'))->getSecurePath();
+            
+
+            $path5= Cloudinary::upload($request->file('imageroom2')->getRealPath(),
+    
+            array("public_id" =>$request->name5,"quality"=>'auto'))->getSecurePath();
+            
+
+
+            $path6= Cloudinary::upload($request->file('imageroom3')->getRealPath(),
+    
+            array("public_id" =>$request->name6,"quality"=>'auto'))->getSecurePath();
+            
+
+
+
+
+
             $input['image1']=$path1;
             $input['image2']=$path2;
             $input['image3']=$path3;
+            $input['imageroom1']=$path4;
+            $input['imageroom2']=$path5;
+            $input['imageroom3']=$path6;
        
         }else{
             $input['image1']='no';
@@ -108,7 +131,7 @@ class InformHotelController extends BaseController
    
     public function show(InformHotel $informHotel)
     {
-        //
+        
     }
 
     
@@ -144,6 +167,37 @@ class InformHotelController extends BaseController
             
           }
 
+
+
+
+          if($request->imageroom1!=null){
+        
+    
+            $path4= Cloudinary::upload($request->file('imageroom1')->getRealPath(),
+            array("public_id" =>$request->name4,"quality"=>'auto'))->getSecurePath();
+            
+          }
+
+
+
+          if($request->imageroom2!=null){
+        
+    
+            $path5= Cloudinary::upload($request->file('imageroom2')->getRealPath(),
+            array("public_id" =>$request->name5,"quality"=>'auto'))->getSecurePath();
+            
+          }
+
+
+
+          if($request->imageroom3!=null){
+        
+    
+            $path6= Cloudinary::upload($request->file('imageroom3')->getRealPath(),
+            array("public_id" =>$request->name6,"quality"=>'auto'))->getSecurePath();
+            
+          }
+
         if($request->image1!=null){
 
             $hotel->image1=$path1;
@@ -154,10 +208,31 @@ class InformHotelController extends BaseController
             $hotel->image2=$path2;
         }
 
+
         if($request->image3!=null){
 
             $hotel->image3=$path3;
         }
+
+        
+
+
+        if($request->imageroom1!=null){
+
+            $hotel->imageroom1=$path4;
+        }
+
+        if($request->imageroom2!=null){
+
+            $hotel->imageroom2=$path5;
+        }
+
+        if($request->imageroom3!=null){
+
+            $hotel->imageroom3=$path6;
+        }
+
+
 
 
 
