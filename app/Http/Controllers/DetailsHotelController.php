@@ -48,9 +48,10 @@ class DetailsHotelController extends BaseController
             'access',
             'breckfast',
             'details_id',
-            // 'imageroom1',
-            // 'imageroom2',
-            // 'imageroom3',
+            'numroom',
+            'imageroom1',
+            'imageroom2',
+            'imageroom3',
         ]);
 
         if($valdit->fails()){
@@ -181,6 +182,7 @@ class DetailsHotelController extends BaseController
        $hotel->animals=$request->animals;
        $hotel->access=$request->access;
        $hotel->breckfast=$request->breckfast;
+       $hotel->numroom=$request->numroom;
 
        $hotel->save();
 

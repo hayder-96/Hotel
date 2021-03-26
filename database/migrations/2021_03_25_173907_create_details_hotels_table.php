@@ -29,6 +29,7 @@ class CreateDetailsHotelsTable extends Migration
             $table->string('breckfast');
             $table->string('imageroom1');
             $table->string('imageroom2');
+            $table->string('numroom');
             $table->string('imageroom3');
             $table->unsignedBigInteger('details_id');
             $table->foreign('details_id')->references('id')->on('inform_hotels')->onDelete('cascade');

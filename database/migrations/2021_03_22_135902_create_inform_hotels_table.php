@@ -24,8 +24,8 @@ class CreateInformHotelsTable extends Migration
             $table->string('number');
             $table->string('country');
             $table->string('city');
-            $table->string('latitude');
-            $table->string('longtude');
+            $table->string('latitude')->unique();
+            $table->string('longtude')->unique();
              $table->string('email');
             $table->unsignedBigInteger('admin_id');
             $table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
