@@ -90,7 +90,7 @@ class DetailsHotelController extends BaseController
     public function show($id)
     {
         
-        $hotel=DetailsHotel::all()->where('id',$id);
+        $hotel=DetailsHotel::where('id',$id)->first();
 
         return $this->Respone($hotel,200);
     }
