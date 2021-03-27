@@ -18,17 +18,16 @@ class DetailsHotelController extends BaseController
     }
 
     
+
     public function create()
     {
-        //
+        
+
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+   
     public function store(Request $request)
     {
         $input=$request->all();
@@ -88,9 +87,12 @@ class DetailsHotelController extends BaseController
     }
 
    
-    public function show(DetailsHotel $detailsHotel)
+    public function show($id)
     {
-        //
+        
+        $hotel=DetailsHotel::where('id'.$id)->first();
+
+        return $this->Respone($hotel,200);
     }
 
     /**
