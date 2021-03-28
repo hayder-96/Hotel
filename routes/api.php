@@ -89,11 +89,7 @@ Route::middleware('auth:api')->group(function(){
     Route::get('desce/{id}',[DescriptionController::class,'indexx']);
 
 
-
-
     Route::resource('comm',CommentController::class);
-
-
 
 
     Route::get('com/{id}',[CommentController::class,'indexx']);

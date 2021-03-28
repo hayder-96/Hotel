@@ -50,20 +50,18 @@ class ReservationController extends BaseController
         $input=$request->all();
 
         $valdit=Validator::make($request->all(),[
-
             'name',
-            'phone',
+            'phone',             
             'email',
             'country',
             'typetrip',
-            'nameroom',
-            'access',
-            'leaving',
             'typeroom',
             'nameroom',
             'priceroom',
+            'access',
+            'leaving',
             'typebed',
-            'typebed',
+            'numbed',
             'numguest',
             'admin_id'
 
