@@ -79,7 +79,7 @@ Route::middleware('auth:api')->group(function(){
     Route::resource('hoteluser',ReservationController::class);
 
 
-    Route::get('search/{city}',[ReservationController::class,'searchhotel']);
+    Route::post('search',[ReservationController::class,'searchhotel']);
 
 
     Route::resource('desc',DescriptionController::class);
