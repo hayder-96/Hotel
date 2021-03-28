@@ -22,10 +22,10 @@ class ReservationController extends BaseController
 
 
 
-    public function searchhotel(Request $request)
+    public function searchhotel($city)
     {
         
-        $hotel=InformHotel::all()->where('country',$request->country)->where('city',$request->city);
+        $hotel=InformHotel::all()->where('city',$city);
         return $this->Respone($hotel,200);
 
 
