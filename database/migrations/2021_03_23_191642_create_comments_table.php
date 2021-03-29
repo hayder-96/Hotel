@@ -17,7 +17,8 @@ class CreateCommentsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('content');
-            $table->string('image')->nullable();
+            $table->string('evaluation');
+            $table->integer('user_id');
             $table->unsignedBigInteger('comment_id');
             $table->foreign('comment_id')->references('id')->on('inform_hotels')->onDelete('cascade');
             $table->timestamps();

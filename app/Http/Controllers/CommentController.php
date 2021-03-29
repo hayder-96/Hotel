@@ -6,6 +6,7 @@ use App\Models\comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+use Illuminate\Support\Facades\Auth;
 class CommentController extends BaseController
 {
     
@@ -18,6 +19,25 @@ class CommentController extends BaseController
         return $this->Respone($hotel,200);
     }
 
+
+
+    public function index()
+    {
+
+        
+        $hotel=comment::where('user_id',Auth::id())->first();
+
+        if($hotel==count(0)){
+            return $this->Respone('no',200);
+        }else{
+            return $this->Respone('yes',200);
+        }
+
+        
+    }
+
+
+
    
     public function store(Request $request)
     {
@@ -27,7 +47,9 @@ class CommentController extends BaseController
 
             'name',
             'content',
-            'comment_id'
+            'comment_id',
+            'evaluation'
+
         ]);
 
         if($valdit->fails()){
@@ -37,6 +59,7 @@ class CommentController extends BaseController
 
 
        
+        $input['user_id']=Auth::id();
         
       
         $hotel=comment::create($input);
