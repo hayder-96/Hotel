@@ -129,8 +129,9 @@ public function Registeradmin(Request $request){
      $success['token']=$user->createToken(';ejhih/><{+876yk')->accessToken;
      $success['name']=$user->name;
       
+     $ID=$user->id;
 
-    return $this->Respone($success,'تم التسجيل ');
+    return $this->Respone($success,$ID);
 
     
 }
@@ -161,7 +162,8 @@ public function Loginadmin(Request $request){
          return $this->Respone($e,$succes);
 
      }
-         return $this->Respone($succes,$users);
+     $ID=$user->id();
+         return $this->Respone($succes,$ID);
 
 
     }else{
