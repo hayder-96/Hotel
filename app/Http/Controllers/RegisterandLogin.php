@@ -162,7 +162,7 @@ public function Loginadmin(Request $request){
          return $this->Respone($e,$succes);
 
      }
-     $ID=$user->id();
+     $ID=$user->id;
          return $this->Respone($succes,$ID);
 
 
