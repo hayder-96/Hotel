@@ -43,10 +43,10 @@ class RegisterandLogin extends BaseController{
    
     $user=User::create($input);
      $success['token']=$user->createToken('hx/.<["kdkjvc823=-)c')->accessToken;
-     $success['name']=$user->name;
+     $n=$user->name;
       
 
-    return $this->Respone($success,'تم التسجيل ');
+    return $this->Respone($success,$n);
 
     
 }
