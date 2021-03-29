@@ -28,9 +28,9 @@ class CommentController extends BaseController
         $hotel=comment::where('user_id',Auth::id())->first();
 
         if($hotel==null){
-            return $this->Respone('no',200);
+            return $this->Respone(200,'no');
         }else{
-            return $this->Respone('yes',200);
+            return $this->Respone(200,'yes');
         }
 
         
