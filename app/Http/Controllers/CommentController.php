@@ -22,7 +22,7 @@ class CommentController extends BaseController
 
 
 
-    public function index($id)
+    public function gettest($id)
     {
 
         

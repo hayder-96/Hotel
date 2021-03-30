@@ -95,6 +95,7 @@ Route::middleware('auth:api')->group(function(){
     Route::get('com/{id}',[CommentController::class,'indexx']);
 
 
+    Route::get('test/{id}',[CommentController::class,'gettest']);
 
 
 
