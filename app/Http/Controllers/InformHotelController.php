@@ -186,4 +186,17 @@ class InformHotelController extends BaseController
         return $this->Respone($hotel,200);
 
     }
+
+
+
+    public function upev(Request $request,$id){
+
+        $hotel=InformHotel::find($id);
+
+        $hotel->ev=$request->ev;
+
+        return $this->Respone($hotel,200);
+
+
+    }
 }

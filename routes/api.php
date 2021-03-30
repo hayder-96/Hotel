@@ -62,7 +62,7 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
-    
+    Route::put('upeve/{id}',[InformHotelController::class,'upev']);
 
 
 
