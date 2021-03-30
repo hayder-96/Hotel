@@ -45,7 +45,7 @@ class CommentController extends BaseController
 
         $valdit=Validator::make($request->all(),[
 
-            'name',
+            
             'content',
             'comment_id',
             'evaluation'
@@ -60,6 +60,8 @@ class CommentController extends BaseController
 
        
         $input['user_id']=Auth::id();
+       $u=Auth::user();
+        $input['name']=$u->name;
         
       
         $hotel=comment::create($input);
