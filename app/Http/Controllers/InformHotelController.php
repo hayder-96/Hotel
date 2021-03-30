@@ -189,9 +189,9 @@ class InformHotelController extends BaseController
 
 
 
-    public function upev(Request $request,$id){
+    public function upev(Request $request){
 
-        $hotel=InformHotel::find($id);
+        $hotel=InformHotel::find($request->id);
 
         $hotel->ev=$request->ev;
 
