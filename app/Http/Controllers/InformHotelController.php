@@ -194,6 +194,7 @@ class InformHotelController extends BaseController
         $hotel=InformHotel::find($request->id);
 
         $hotel->ev=$request->ev;
+        $hotel->save();
 
         return $this->Respone($hotel,200);
 
