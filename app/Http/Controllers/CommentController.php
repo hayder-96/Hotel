@@ -17,15 +17,16 @@ class CommentController extends BaseController
         $hotel=comment::all()->where('comment_id',$id);
 
         return $this->Respone($hotel,200);
+
     }
 
 
 
-    public function index()
+    public function index($id)
     {
 
         
-        $hotel=comment::where('user_id',Auth::id())->first();
+        $hotel=comment::where('user_id',Auth::id())->where('comment_id',$id)->first();
 
         if($hotel==null){
             return $this->Respone(200,'no');
