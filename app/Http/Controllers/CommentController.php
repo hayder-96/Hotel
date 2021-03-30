@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Resources\hotel;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Support\Facades\Auth;
 class CommentController extends BaseController
@@ -16,7 +17,7 @@ class CommentController extends BaseController
         
         $hotel=comment::all()->where('comment_id',$id);
 
-        return $this->Respone($hotel,200);
+        return $this->Respone(hotel::collection($hotel),200);
 
     }
 
