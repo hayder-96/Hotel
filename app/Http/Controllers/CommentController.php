@@ -17,7 +17,7 @@ class CommentController extends BaseController
     {
 
         
-        $hotel=comment::all()->where('comment_id',$id)->where('user_id'!=Auth::id());
+        $hotel=comment::all()->where('comment_id',$id)->where('user_id',!=,Auth::id());
 
         return $this->Respone(hotel::collection($hotel),200);
 
