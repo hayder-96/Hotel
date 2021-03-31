@@ -97,8 +97,14 @@ class ReservationController extends BaseController
     }
 
    
-    public function update(Request $request, reservation $reservation)
+    public function update(Request $request,$id)
     {
+
+        $hotel=reservation::find($id);
+
+        $hotel->noty=$request->noty;
+        $hotel->save();
+        return $this->Respone($hotel,200);
         
     }
 
