@@ -69,8 +69,8 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
-    Route::delete('delnoty',[InformHotelController::class,'deletenoty']);
-    
+
+
 
 });
 

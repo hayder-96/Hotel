@@ -44,16 +44,25 @@ class InformHotelController extends BaseController
 
 
 
+    public function update(Request $request,$id)
+    {
+
+        $hotel=reservation::find($id);
+
+        $hotel->noty=$request->noty;
+        $hotel->save();
+        return $this->Respone($hotel,200);
+        
+    }
+
+
+
 
 
     public function deletenoty($id)
     {
         
-        $hotel=reservation::find($id);
-    
-        $hotel->delete();
-
-        return $this->Respone($hotel,200);
+       
 
     }
 
