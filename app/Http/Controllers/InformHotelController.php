@@ -6,6 +6,7 @@ use App\Models\InformHotel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\noty;
 use App\Models\reservation;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 class InformHotelController extends BaseController
@@ -29,6 +30,47 @@ class InformHotelController extends BaseController
 
 
     }
+
+
+
+    public function getnoty()
+    {
+        
+        $hotel=reservation::all()->where('noty','yes')->where('admin_id',Auth::id());
+        return $this->Respone(noty::collection($hotel),200);
+
+
+    }
+
+
+
+
+
+    public function deletenoty($id)
+    {
+        
+        $hotel=reservation::find($id);
+    
+        $hotel->delete();
+
+        return $this->Respone($hotel,200);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public function store(Request $request)

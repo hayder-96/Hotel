@@ -28,6 +28,7 @@ class reservation extends Model
         'typebed',
         'numbed',
         'numguest',
+        'noty',
         "admin_id"
     ];
 

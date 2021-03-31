@@ -65,7 +65,12 @@ Route::middleware('admin:admin')->group(function(){
     Route::post('upeve',[InformHotelController::class,'upev']);
 
 
+    Route::get('getnotyy',[InformHotelController::class,'getnoty']);
 
+
+
+    Route::delete('delnoty',[InformHotelController::class,'deletenoty']);
+    
 
 });
 

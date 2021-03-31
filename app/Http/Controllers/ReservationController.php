@@ -22,6 +22,9 @@ class ReservationController extends BaseController
 
 
 
+   
+
+
     public function searchhotel(Request $request)
     {
         
@@ -63,6 +66,7 @@ class ReservationController extends BaseController
             'typebed',
             'numbed',
             'numguest',
+            'noty',
             'admin_id'
 
             ]);
