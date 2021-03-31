@@ -11,11 +11,13 @@ use Illuminate\Support\Facades\Auth;
 class CommentController extends BaseController
 {
     
+
+
     public function indexx($id)
     {
 
         
-        $hotel=comment::all()->where('comment_id',$id);
+        $hotel=comment::all()->where('comment_id',$id)->where('user_id'!=Auth::id());
 
         return $this->Respone(hotel::collection($hotel),200);
 
@@ -32,7 +34,8 @@ class CommentController extends BaseController
         if($hotel==null){
             return $this->Respone(200,'no');
         }else{
-            return $this->Respone(200,'yes');
+
+            return $this->Respone($hotel,'yes');
         }
 
         
