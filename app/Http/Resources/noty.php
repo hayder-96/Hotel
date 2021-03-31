@@ -20,7 +20,8 @@ class noty extends JsonResource
       return [
             
         
-    
+         'id'=>$this->id,
+         'name'=>$this->name,
          'noty'=>$this->noty
 
          
