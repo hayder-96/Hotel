@@ -70,6 +70,8 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
+    Route::put('upen',[DetailsHotelController::class,'upena']);
+
 
 
 });

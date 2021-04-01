@@ -27,6 +27,7 @@ class DetailsHotel extends Model
             'imageroom2',
             'imageroom3',
             'numroom',
-            'details_id'
+            'details_id',
+            'enable'
     ];
 }

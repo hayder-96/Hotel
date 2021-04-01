@@ -29,7 +29,8 @@ class reservation extends Model
         'numbed',
         'numguest',
         'noty',
-        "admin_id"
+        "admin_id",
+        'room_id'
     ];
 
 

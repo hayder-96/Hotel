@@ -208,4 +208,21 @@ class DetailsHotelController extends BaseController
 
         return $this->Respone($hotel,200);
     }
+
+
+
+    public function upena(Request $request,$id){
+
+
+        $hotel=DetailsHotel::find($id);
+
+
+        $hotel->enable=$request->enable;
+        $hotel->save();
+
+        return $this->Respone($hotel,200);
+
+
+
+    }
 }
