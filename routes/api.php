@@ -5,6 +5,7 @@ use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\DetailsHotelController;
 use App\Http\Controllers\ImageroomController;
 use App\Http\Controllers\InformHotelController;
+use App\Http\Controllers\NotifyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterandLogin;
@@ -73,6 +74,12 @@ Route::middleware('admin:admin')->group(function(){
     Route::put('upen/{id}',[DetailsHotelController::class,'upena']);
 
 
+    
+    Route::resource('intonoty',NotifyController::class);
+
+    
+
+
 
 });
 
@@ -106,6 +113,13 @@ Route::middleware('auth:api')->group(function(){
 
 
 
+    Route::get('notyno',[NotifyController::class,'getnotyno']);
+
+
+    Route::get('notyyes',[NotifyController::class,'getnotyyes']);
+    
+
+    Route::put('upnoty/{id}',[NotifyController::class,'updatenoty']);
 });
 
 

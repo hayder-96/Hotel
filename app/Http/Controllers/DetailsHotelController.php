@@ -17,6 +17,9 @@ class DetailsHotelController extends BaseController
         return $this->Respone($hotel,200);
     }
 
+
+    
+
     
 
     public function create()
