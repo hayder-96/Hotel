@@ -24,8 +24,8 @@ class notyuser extends JsonResource
         'user_id'=>$this->user_id,
         'namehotel'=>$this->namehotel,
         'noty'=>$this->noty,
-        'created_at'=>$this->created_at->format('d/m/Y'),
-        'updated_at'=>$this->updated_at->format('d/m/Y'),
+        'created_at'=>$this->created_at->format('yyyy/MM/dd HH:mm:ss'),
+        'updated_at'=>$this->updated_at->format('yyyy/MM/dd HH:mm:ss'),
 
     
    ];
