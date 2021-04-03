@@ -20,7 +20,9 @@ class notyuser extends JsonResource
        return [
             
         
-    
+        'content'=>$this->content,
+        'user_id'=>$this->user_id,
+        'namehotel'=>$this->namehotel,
         'noty'=>$this->noty
 
         
