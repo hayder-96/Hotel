@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Validator;
 use App\Models\notify;
+use App\Http\Resources\notyuser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class NotifyController extends BaseController
@@ -24,7 +25,7 @@ class NotifyController extends BaseController
         
         $hotel=notify::all()->where('user_id',Auth::id())->where('noty','no');
 
-        return $this->Respone($hotel,200);
+        return $this->Respone(notyuser::collection($hotel),200);
     }
 
 
@@ -33,7 +34,7 @@ class NotifyController extends BaseController
         
         $hotel=notify::all()->where('user_id',Auth::id())->where('noty','yes');
 
-        return $this->Respone($hotel,200);
+        return $this->Respone(notyuser::collection($hotel),200);
     }
 
 
