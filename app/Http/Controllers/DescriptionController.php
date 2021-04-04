@@ -12,7 +12,7 @@ class DescriptionController extends BaseController
     public function indexx($id)
     {
         
-        $hotel=description::where('desc_id',$id)->get();
+        $hotel=description::where('desc_id',$id)->first();
 
         return $this->Respone($hotel,200);
     }
@@ -86,9 +86,19 @@ class DescriptionController extends BaseController
      * @param  \App\Models\description  $description
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, description $description)
+    public function update(Request $request,$id)
     {
-        //
+      
+        $hotel=description::find($id);
+        $hotel->userrating=$request->userrating;
+        $hotel->content=$request->content;
+
+        $hotel->save();
+
+        return $this->Respone($hotel,200);
+
+
+
     }
 
     /**

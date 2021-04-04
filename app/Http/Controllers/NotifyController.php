@@ -153,8 +153,11 @@ class NotifyController extends BaseController
      * @param  \App\Models\notify  $notify
      * @return \Illuminate\Http\Response
      */
-    public function destroy(notify $notify)
+    public function destroy($id)
     {
-        //
+        $hotel=notify::find($id);
+
+        $hotel->delete();
+        return $this->Respone($hotel,200);
     }
 }
