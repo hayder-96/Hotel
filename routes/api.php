@@ -78,8 +78,10 @@ Route::middleware('admin:admin')->group(function(){
     Route::resource('intonoty',NotifyController::class);
 
     
+    Route::resource('desc',DescriptionController::class);
 
 
+    Route::get('desce/{id}',[DescriptionController::class,'indexx']);
 
 });
 
@@ -96,7 +98,7 @@ Route::middleware('auth:api')->group(function(){
     Route::post('search',[ReservationController::class,'searchhotel']);
 
 
-    Route::resource('desc',DescriptionController::class);
+    
 
 
 
