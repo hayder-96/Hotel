@@ -51,36 +51,36 @@ class ReservationController extends BaseController
     public function store(Request $request)
     {
 
-       // $idi=InformHotel::find($request->id);
+        $idi=InformHotel::find($request->id);
         $input=$request->all();
 
-        // $valdit=Validator::make($request->all(),[
-        //     'name',
-        //     'phone',             
-        //     'email',
-        //     'country',
-        //     'typetrip',
-        //     'typeroom',
-        //     'nameroom',
-        //     'priceroom',
-        //     'access',
-        //     'leaving',
-        //     'typebed',
-        //     'numbed',
-        //     'numguest',
-        //     'noty',
-        //     'admin_id'
+        $valdit=Validator::make($request->all(),[
+            'name',
+            'phone',             
+            'email',
+            'country',
+            'typetrip',
+            'typeroom',
+            'nameroom',
+            'priceroom',
+            'access',
+            'leaving',
+            'typebed',
+            'numbed',
+            'numguest',
+            'noty',
+            'admin_id'
 
-        //     ]);
+            ]);
 
-        //     if($valdit->fails()){
+            if($valdit->fails()){
     
-        //         return $this->sendError('Failed input',$valdit->errors());
-        //     }
+                return $this->sendError('Failed input',$valdit->errors());
+            }
 
 
             $input['user_id']=Auth::id();
-          //  $input['namehotel']=$idi->namehotel;
+            $input['namehotel']=$idi->namehotel;
 
       
             $hotel=reservation::create($input);
