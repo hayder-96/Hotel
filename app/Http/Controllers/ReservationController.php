@@ -51,7 +51,7 @@ class ReservationController extends BaseController
     public function store(Request $request)
     {
 
-        $idi=InformHotel::find($request->admin_id);
+        $idi=InformHotel::find($request->id);
         $input=$request->all();
 
         $valdit=Validator::make($request->all(),[
