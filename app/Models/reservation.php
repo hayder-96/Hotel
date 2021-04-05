@@ -23,7 +23,6 @@ class reservation extends Model
         'leaving',
         'user_id',
         'typeroom',
-        'nameroom',
         'priceroom',
         'typebed',
         'numbed',
