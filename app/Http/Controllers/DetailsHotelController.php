@@ -6,6 +6,7 @@ use App\Models\DetailsHotel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+use App\Http\Resources\details;
 class DetailsHotelController extends BaseController
 {
   
@@ -14,7 +15,7 @@ class DetailsHotelController extends BaseController
     {
         $hotel=DetailsHotel::all()->where('details_id',$id);
 
-        return $this->Respone($hotel,200);
+        return $this->Respone(details::collection($hotel),200);
     }
 
 
