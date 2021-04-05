@@ -94,11 +94,10 @@ class DescriptionController extends BaseController
      * @param  \App\Models\description  $description
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function updatee(Request $request)
     {
       
-        $hotel=description::find($id);
-        $hotel->userrating=$request->userrating;
+        $hotel=description::where('desc_id',$request->id)->first();
         $hotel->content=$request->content;
 
         $hotel->save();

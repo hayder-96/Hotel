@@ -83,6 +83,9 @@ Route::middleware('admin:admin')->group(function(){
 
     Route::get('desce/{id}',[DescriptionController::class,'indexx']);
 
+
+    Route::post('updesc',[DescriptionController::class,'updatee']);
+
 });
 
 
