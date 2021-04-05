@@ -80,7 +80,7 @@ class ReservationController extends BaseController
 
 
             $input['user_id']=Auth::id();
-            $input['namehotel']=$idi->namehotel;
+          //  $input['namehotel']=$idi->namehotel;
 
       
             $hotel=reservation::create($input);
