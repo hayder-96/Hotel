@@ -14,7 +14,15 @@ class DescriptionController extends BaseController
         
         $hotel=description::where('desc_id',$id)->first();
 
-        return $this->Respone($hotel,200);
+        if($hotel==null){
+
+            return $this->Respone(200,'no');
+            
+        }else{
+
+            return $this->Respone($hotel,'yes');
+        }
+
     }
 
     

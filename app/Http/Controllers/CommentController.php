@@ -34,7 +34,6 @@ class CommentController extends BaseController
         if($hotel==null){
             return $this->Respone(200,'no');
         }else{
-
             return $this->Respone($hotel,'yes');
         }
 
