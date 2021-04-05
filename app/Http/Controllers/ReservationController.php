@@ -50,6 +50,8 @@ class ReservationController extends BaseController
    
     public function store(Request $request)
     {
+
+        $idi=InformHotel::find($request->id);
         $input=$request->all();
 
         $valdit=Validator::make($request->all(),[
@@ -78,6 +80,7 @@ class ReservationController extends BaseController
 
 
             $input['user_id']=Auth::id();
+            $input['namehotel']=$idi->namehotel;
 
             $hotel=reservation::create($input);
 

@@ -30,7 +30,8 @@ class reservation extends Model
         'numguest',
         'noty',
         "admin_id",
-        'room_id'
+        'room_id',
+        'namehotel'
     ];
 
 
