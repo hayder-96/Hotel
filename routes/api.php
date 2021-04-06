@@ -95,6 +95,16 @@ Route::middleware('admin:admin')->group(function(){
 Route::middleware('auth:api')->group(function(){
 
 
+
+
+    Route::get('getid',[RegisterandLogin::class,'getId']);
+
+
+
+
+
+
+
     Route::resource('hoteluser',ReservationController::class);
 
 

@@ -173,6 +173,16 @@ public function Loginadmin(Request $request){
 
 
 
+public function getId(){
+
+
+    $i=Auth::id();
+
+    return $this->Respone(200,$i);
+}
+
+
+
 
 
 
