@@ -128,11 +128,11 @@ Route::middleware('auth:api')->group(function(){
 
 
 
-    // Route::get('notyno',[NotifyController::class,'getnotyno']);
+    Route::get('notyno',[NotifyController::class,'getnotyno']);
 
 
 
-    // Route::get('notyyes',[NotifyController::class,'getnotyyes']);
+    Route::get('notyyes',[NotifyController::class,'getnotyyes']);
     
 
     Route::put('upnoty/{id}',[NotifyController::class,'updatenoty']);
