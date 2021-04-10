@@ -54,7 +54,7 @@ Route::middleware('contr:controll')->group(function(){
 
     Route::get('getid',[RegisterandLogin::class,'getId']);
 
-    Route::put('upenable/{id}',[InformHotel::class,'updateenable']);
+    Route::put('upenable/{id}',[InformHotelController::class,'updateenable']);
 
 
 });
