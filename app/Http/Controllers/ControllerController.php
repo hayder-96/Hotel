@@ -26,6 +26,16 @@ class ControllerController extends BaseController
 
 
 
+    public function indexx()
+    {
+        
+        $hotel=InformHotel::all()->where('enable','yes');
+        return $this->Respone($hotel,200);
+    }
+
+
+
+
 
 
 

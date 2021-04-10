@@ -57,6 +57,7 @@ Route::middleware('contr:controll')->group(function(){
     
 
 
+    Route::get('gethotelyes',[ControllerController::class,'indexx']);
 
 
     Route::get('getid',[RegisterandLogin::class,'getId']);
