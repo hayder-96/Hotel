@@ -48,6 +48,15 @@ Route::post('Loginadcon',[ControllerController::class,'login']);
 
 
 
+Route::middleware('contr:controll')->group(function(){
+
+
+    Route::get('getid',[RegisterandLogin::class,'getId']);
+
+
+});
+
+
 
 
 
