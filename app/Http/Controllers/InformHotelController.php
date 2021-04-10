@@ -251,4 +251,29 @@ class InformHotelController extends BaseController
 
 
     }
+
+
+
+
+    public function updateenable(Request $request,$id)
+    {
+
+        $hotel=InformHotel::find($id);
+
+        $hotel->enable=$request->enable;
+        $hotel->save();
+        return $this->Respone($hotel,200);
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
