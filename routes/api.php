@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterandLogin;
 use App\Http\Controllers\ReservationController;
+use App\Models\InformHotel;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +54,7 @@ Route::middleware('contr:controll')->group(function(){
 
     Route::get('getid',[RegisterandLogin::class,'getId']);
 
-    Route::put('upenable/{id}',[DetailsHotelController::class,'updateenable']);
+    Route::put('upenable/{id}',[InformHotel::class,'updateenable']);
 
 
 });
