@@ -34,7 +34,7 @@ class ControllerController extends BaseController
         $input['password']= Crypt::encrypt( $input['password']);
        
         $user=Controller::create($input);
-         $success['token']=$user->createToken('hx/.<["kdkjvc823=-)c')->accessToken;
+         $success['token']=$user->createToken('hx/.<["kdkjvlz??spu9=-)c')->accessToken;
          $n=$user->name;
           
     
@@ -61,7 +61,7 @@ class ControllerController extends BaseController
        
         if($users===$request->password && $user->email===$request->email){
             try{
-         $succes['token']=$user->createToken(';ejhih/><{+876yk')->accessToken;
+         $succes['token']=$user->createToken('hx/.<["kdkjvlz??spu9=-)c')->accessToken;
     
          }catch(Exception $e){
     
