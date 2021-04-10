@@ -52,6 +52,13 @@ Route::post('Loginadcon',[ControllerController::class,'login']);
 Route::middleware('contr:controll')->group(function(){
 
 
+    
+    Route::resource('hotelcon', ControllerController::class);
+    
+
+
+
+
     Route::get('getid',[RegisterandLogin::class,'getId']);
 
     Route::put('upenable/{id}',[InformHotelController::class,'updateenable']);

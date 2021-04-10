@@ -7,10 +7,36 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
+use App\Models\InformHotel;
 use Exception;
 class ControllerController extends BaseController
 {
    
+
+
+
+
+    public function index()
+    {
+        
+        $hotel=InformHotel::all()->where('enable','no');
+        return $this->Respone($hotel,200);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function Register(Request $request){
     
         $validit=Validator::make($request->all(),[
@@ -76,4 +102,9 @@ class ControllerController extends BaseController
             return $this->Respone(500,"البريد  او الرمز غير متطابق");
         }  
     }
+
+
+
+
+
 }
