@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ControllerController;
 use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\DetailsHotelController;
 use App\Http\Controllers\ImageroomController;
@@ -42,6 +43,14 @@ Route::post('Loginad',[RegisterandLogin::class,'loginadmin']);
 
 
 
+Route::post('Registercon',[ControllerController::class,'Register']);
+Route::post('Loginadcon',[ControllerController::class,'login']);
+
+
+
+
+
+
 Route::middleware('admin:admin')->group(function(){
 
 
@@ -59,7 +68,10 @@ Route::middleware('admin:admin')->group(function(){
     Route::get('getdetail/{id}',[DetailsHotelController::class,'indexx']);
 
 
+
+
     Route::get('getusers/{id}',[InformHotelController::class,'indexxx']);
+
 
 
 

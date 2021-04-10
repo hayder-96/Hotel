@@ -53,6 +53,13 @@ return [
             'provider' => 'admins',
           //  'hash' => false,
         ],
+
+
+        'controll' => [
+            'driver' => 'passport',
+            'provider' => 'contr',
+          //  'hash' => false,
+        ],
     ],
 
     /*
@@ -82,6 +89,13 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
+        ],
+
+
+
+        'contr' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Controller::class,
         ],
         // 'users' => [
         //     'driver' => 'database',
