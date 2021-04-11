@@ -60,9 +60,15 @@ Route::middleware('contr:controll')->group(function(){
     Route::get('gethotelyes',[ControllerController::class,'indexx']);
 
 
-    Route::get('getid',[RegisterandLogin::class,'getId']);
-
     Route::put('upenable/{id}',[InformHotelController::class,'updateenable']);
+
+
+
+    Route::resource('notycon',NotifyController::class);
+
+
+
+
 
 
 });
@@ -117,6 +123,32 @@ Route::middleware('admin:admin')->group(function(){
 
 
     Route::post('updesc',[DescriptionController::class,'updatee']);
+
+
+
+
+
+    Route::resource('notycon',NotifyController::class);
+    
+
+    Route::get('getnotyconyes',[NotifyController::class,'indexx']);
+
+
+    Route::get('getnotynoall',[NotifyController::class,'indexxx']);
+
+
+
+    Route::get('getnotyyesall',[NotifyController::class,'indexxxx']);
+
+
+
+
+
+
+
+
+
+
 
 });
 

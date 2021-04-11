@@ -17,7 +17,7 @@ class InformHotelController extends BaseController
     public function index()
     {
         
-        $hotel=InformHotel::all()->where('admin_id',Auth::id());
+        $hotel=InformHotel::all()->where('admin_id',Auth::id())->where('enable','yes');
         return $this->Respone($hotel,200);
     }
 
@@ -65,19 +65,6 @@ class InformHotelController extends BaseController
        
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
