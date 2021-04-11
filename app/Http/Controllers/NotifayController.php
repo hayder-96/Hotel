@@ -63,51 +63,6 @@ class NotifayController extends BaseController
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    public function create()
-    {
-        
-
-
-
-    }
-
    
     public function store(Request $request)
     {
@@ -135,35 +90,18 @@ class NotifayController extends BaseController
     }
     
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\notifay  $notifay
-     * @return \Illuminate\Http\Response
-     */
     public function show(notifay $notifay)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\notifay  $notifay
-     * @return \Illuminate\Http\Response
-     */
+  
     public function edit(notifay $notifay)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\notifay  $notifay
-     * @return \Illuminate\Http\Response
-     */
+   
     public function update(Request $request,$id)
     {
     
@@ -176,12 +114,7 @@ class NotifayController extends BaseController
         return $this->Respone($hotel,200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\notifay  $notifay
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
         

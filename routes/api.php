@@ -6,6 +6,7 @@ use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\DetailsHotelController;
 use App\Http\Controllers\ImageroomController;
 use App\Http\Controllers\InformHotelController;
+use App\Http\Controllers\NotifayController;
 use App\Http\Controllers\NotifyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -64,7 +65,7 @@ Route::middleware('contr:controll')->group(function(){
 
 
 
-    Route::resource('notycon',NotifyController::class);
+    Route::resource('notycon',NotifayController::class);
 
 
 
@@ -128,17 +129,17 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
-    Route::resource('notycon',NotifyController::class);
+    Route::resource('notycon',NotifayController::class);
     
 
-    Route::get('getnotyconyes',[NotifyController::class,'indexx']);
+    Route::get('getnotyconyes',[NotifayController::class,'indexx']);
 
 
-    Route::get('getnotynoall',[NotifyController::class,'indexxx']);
+    Route::get('getnotynoall',[NotifayController::class,'indexxx']);
 
 
 
-    Route::get('getnotyyesall',[NotifyController::class,'indexxxx']);
+    Route::get('getnotyyesall',[NotifayController::class,'indexxxx']);
 
 
 
