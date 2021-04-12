@@ -26,6 +26,7 @@ class InformHotel extends Model
         'longtude',
         'admin_id',
         'email',
-        'ev'
+        'ev',
+        'enable'
     ];
 }
