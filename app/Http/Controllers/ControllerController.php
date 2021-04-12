@@ -31,7 +31,7 @@ class ControllerController extends BaseController
     {
         
         $hotel=InformHotel::all()->where('enable','yes');
-        return $this->Respone($hotel,200);
+        return $this->Respone(hotelcon::collection($hotel),200);
     }
 
 
