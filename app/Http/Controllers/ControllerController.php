@@ -37,6 +37,18 @@ class ControllerController extends BaseController
 
 
 
+    public function deletehotel($id)
+    {
+        
+        $hotel=InformHotel::find($id);
+
+        $hotel->delete();
+        return $this->Respone($hotel,200);
+    }
+
+
+
+
 
 
 

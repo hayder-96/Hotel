@@ -69,6 +69,7 @@ Route::middleware('contr:controll')->group(function(){
 
 
 
+    Route::delete('delete/{id}',[ControllerController::class,'deletehotel']);
 
 
 
