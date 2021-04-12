@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
+use App\Http\Resources\hotelcon;
 use App\Models\InformHotel;
 use Exception;
 class ControllerController extends BaseController
@@ -20,7 +21,7 @@ class ControllerController extends BaseController
     {
         
         $hotel=InformHotel::all()->where('enable','no');
-        return $this->Respone($hotel,200);
+        return $this->Respone(hotelcon::collection($hotel),200);
     }
 
 
