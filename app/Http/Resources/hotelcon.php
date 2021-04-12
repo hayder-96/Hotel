@@ -32,6 +32,7 @@ class hotelcon extends JsonResource
        'admin_id'=>$this->admin_id,
        'email'=>$this->email,
        'ev'=>$this->ev,
+       'enable'=>$this->enable,
        'created_at'=>$this->created_at->format('d/m/Y H:i:s'),
        'updated_at'=>$this->updated_at->format('y/m/d H:i:s'),
        ];
