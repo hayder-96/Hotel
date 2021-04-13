@@ -22,7 +22,10 @@ class noty extends JsonResource
         
          'id'=>$this->id,
          'name'=>$this->name,
-         'noty'=>$this->noty
+         'noty'=>$this->noty,
+         'content'=>$this->content
+
+
 
          
     ];
