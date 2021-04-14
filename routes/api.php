@@ -73,6 +73,11 @@ Route::middleware('contr:controll')->group(function(){
 
 
 
+    Route::get('getdetail/{id}',[DetailsHotelController::class,'indexx']);
+
+    Route::get('getdetail/{id}',[DetailsHotelController::class,'indexx']);
+
+
 });
 
 
