@@ -35,8 +35,8 @@ class details extends JsonResource
         'imageroom1'=>$this->imageroom1,
         'imageroom2'=>$this->imageroom2,
         'imageroom3'=>$this->imageroom3,
-        'enable'=>$this->enable
-        
+        'enable'=>$this->enable,
+        'show'=>$this->show,
        
          
     ];
