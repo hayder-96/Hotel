@@ -13,7 +13,7 @@ class DetailsHotelController extends BaseController
 
     public function indexx($id)
     {
-        $hotel=DetailsHotel::all()->where('details_id',$id);
+        $hotel=DetailsHotel::all()->where('details_id',$id)->where('show','yes');
 
         return $this->Respone(details::collection($hotel),200);
     }
