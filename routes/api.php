@@ -78,6 +78,9 @@ Route::middleware('contr:controll')->group(function(){
     Route::resource('details',DetailsHotelController::class);
 
 
+
+    Route::put('updateshow/{id}',[DetailsHotelController::class,'upshow']);
+
 });
 
 

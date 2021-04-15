@@ -226,7 +226,21 @@ class DetailsHotelController extends BaseController
 
         return $this->Respone($hotel,200);
 
+    }
 
+
+
+
+    public function upshow(Request $request,$id){
+
+
+        $hotel=DetailsHotel::find($id);
+
+
+        $hotel->show=$request->show;
+        $hotel->save();
+
+        return $this->Respone($hotel,200);
 
     }
 }
