@@ -104,7 +104,7 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
-    Route::get('getdetail/{id}',[DetailsHotelController::class,'indexx']);
+    Route::get('getdetails/{id}',[DetailsHotelController::class,'indexxx']);
 
 
 
