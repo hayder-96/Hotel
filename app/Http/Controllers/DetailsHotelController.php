@@ -19,6 +19,19 @@ class DetailsHotelController extends BaseController
     }
 
 
+
+
+    public function indexxx($id)
+    {
+        $hotel=DetailsHotel::all()->where('details_id',$id);
+
+        return $this->Respone(details::collection($hotel),200);
+    }
+
+
+
+
+
     
 
     
