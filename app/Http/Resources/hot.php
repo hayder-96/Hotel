@@ -26,7 +26,6 @@ class hot extends JsonResource
         'image3'=>$this->image3,
         'namehotel'=>$this->namehotel,
         'country'=>$this->country,
-
         'city'=>$this->city
 
        ];
