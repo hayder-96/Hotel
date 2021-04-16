@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cancel;
+use App\Models\cancel as cc;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Resources\cancel as ca;
@@ -12,7 +12,7 @@ class CancelController extends BaseController
     public function index($id)
     {
         
-        $hotel=cancel::orderBy('created_at','DESC')->where('room_id',$id);
+        $hotel=cc::orderBy('created_at','DESC')->where('room_id',$id);
 
         return $this->Respone(ca::collection($hotel),200);
     }
@@ -44,7 +44,7 @@ class CancelController extends BaseController
         }
 
 
-        //$hotel=cancel::create($input);
+        $hotel=cc::create($input);
 
         return $this->Respone($request->name,'Success input');
     }
@@ -56,30 +56,13 @@ class CancelController extends BaseController
      * @param  \App\Models\cancel  $cancel
      * @return \Illuminate\Http\Response
      */
-    public function show(cancel $cancel)
+    public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\cancel  $cancel
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(cancel $cancel)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\cancel  $cancel
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, cancel $cancel)
+  
+    public function update(Request $request,$id)
     {
         //
     }
@@ -90,7 +73,7 @@ class CancelController extends BaseController
      * @param  \App\Models\cancel  $cancel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cancel $cancel)
+    public function destroy($id)
     {
         //
     }
