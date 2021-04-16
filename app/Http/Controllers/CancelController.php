@@ -8,11 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Resources\cancel as ca;
 class CancelController extends BaseController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  
     public function index($id)
     {
         
@@ -21,22 +17,13 @@ class CancelController extends BaseController
         return $this->Respone(ca::collection($hotel),200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
        
@@ -56,8 +43,6 @@ class CancelController extends BaseController
             return $this->sendError('Failed input',$valdit->errors());
         }
 
-    
-       
 
         $hotel=cancel::create($input);
 

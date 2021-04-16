@@ -88,6 +88,8 @@ Route::middleware('contr:controll')->group(function(){
 
     Route::resource('can',CancelController::class);
 
+    Route::get('getcan/{id}',[CancelController::class,'index']);
+
 });
 
 
