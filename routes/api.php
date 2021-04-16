@@ -90,7 +90,7 @@ Route::middleware('contr:controll')->group(function(){
 
     Route::get('getcan/{id}',[CancelController::class,'index']);
 
-    
+
 });
 
 
@@ -164,6 +164,7 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
+    Route::resource('can',CancelController::class);
 
 
 
