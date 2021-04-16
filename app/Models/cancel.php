@@ -10,9 +10,6 @@ class cancel extends Model
     use HasFactory;
 
 
-
-
-
     protected $fillable = [
 
         'name',

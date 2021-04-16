@@ -11,6 +11,7 @@ class DetailsHotel extends Model
 
 
     protected $fillable = [
+        'id',
     'typeroom',
         'nameroom',
         'priceroom',

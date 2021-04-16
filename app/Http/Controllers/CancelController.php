@@ -46,7 +46,7 @@ class CancelController extends BaseController
 
         $hotel=cc::create($input);
 
-        return $this->Respone($request->name,'Success input');
+        return $this->Respone($hotel,'Success input');
     }
     
 
