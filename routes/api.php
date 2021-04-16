@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CancelController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ControllerController;
 use App\Http\Controllers\DescriptionController;
@@ -83,6 +84,9 @@ Route::middleware('contr:controll')->group(function(){
 
 
     Route::put('updateshow/{id}',[DetailsHotelController::class,'upshow']);
+
+
+    Route::resource('can',CancelController::class);
 
 });
 
