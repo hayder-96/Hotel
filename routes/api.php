@@ -164,7 +164,7 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
-    Route::resource('can',CancelController::class);
+   
 
 
 

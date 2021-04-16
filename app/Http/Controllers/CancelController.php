@@ -12,7 +12,7 @@ class CancelController extends BaseController
     public function index($id)
     {
         
-        $hotel=cc::orderBy('created_at','DESC')->where('room_id',$id);
+        $hotel=cc::orderBy('created_at','DESC')->where('room_id',$id)->get();
 
         return $this->Respone(ca::collection($hotel),200);
     }
