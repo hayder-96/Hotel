@@ -23,7 +23,7 @@ class NotifyController extends BaseController
     public function getnotyno()
     {
         
-        $hotel=notify::all()->where('user_id',Auth::id())->where('noty','no');
+        $hotel=notify::orderBy('created_at','DESC')->where('user_id',Auth::id())->where('noty','no')->get();
 
         return $this->Respone(notyuser::collection($hotel),200);
     }
