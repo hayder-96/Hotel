@@ -90,6 +90,7 @@ Route::middleware('contr:controll')->group(function(){
 
     Route::get('getcan/{id}',[CancelController::class,'index']);
 
+    
 });
 
 
