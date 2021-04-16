@@ -17,11 +17,13 @@ class hot extends JsonResource
        // return parent::toArray($request);
 
        return[
-
+       
 
         'id'=>$this->id,
         'evaluation'=>$this->evaluation,
-
+        'image1'=>$this->image1,
+        'image2'=>$this->image2,
+        'image3'=>$this->image3,
         'namehotel'=>$this->namehotel,
         'country'=>$this->country,
 
