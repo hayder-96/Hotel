@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\noty;
+use App\Http\Resources\hot;
 use App\Models\reservation;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 class InformHotelController extends BaseController
@@ -18,7 +19,7 @@ class InformHotelController extends BaseController
     {
         
         $hotel=InformHotel::all()->where('admin_id',Auth::id())->where('enable','yes');
-        return $this->Respone($hotel,200);
+        return $this->Respone(hot::collection($hotel),200);
     }
 
   
