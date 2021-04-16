@@ -23,7 +23,10 @@ class noty extends JsonResource
          'id'=>$this->id,
          'name'=>$this->name,
          'noty'=>$this->noty,
-         'content'=>$this->content
+         'content'=>$this->content,
+         'created_at'=>$this->created_at->format('d/m/Y H:i:s'),
+         'updated_at'=>$this->updated_at->format('y/m/d H:i:s'),
+
 
 
 
