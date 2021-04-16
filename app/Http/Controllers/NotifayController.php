@@ -20,7 +20,7 @@ class NotifayController extends BaseController
 
         $hotel=notifay::all()->where('admin_id',Auth::id())->where('noty','no');
 
-        return $this->Respone($hotel,200);
+        return $this->Respone(noty::collection($hotel),200);
 
     }
 
@@ -30,7 +30,7 @@ class NotifayController extends BaseController
 
         $hotel=notifay::all()->where('admin_id',Auth::id())->where('noty','yes');
 
-        return $this->Respone($hotel,200);
+        return $this->Respone(noty::collection($hotel),200);
 
     }
 
