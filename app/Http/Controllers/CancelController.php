@@ -32,7 +32,7 @@ class CancelController extends BaseController
 
         $valdit=Validator::make($request->all(),[
 
-            'name',
+        'name',
         'content',
         'room_id'
 
@@ -44,9 +44,9 @@ class CancelController extends BaseController
         }
 
 
-        $hotel=cancel::create($input);
+        //$hotel=cancel::create($input);
 
-        return $this->Respone($hotel,'Success input');
+        return $this->Respone($request->name,'Success input');
     }
     
 
