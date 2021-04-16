@@ -13,7 +13,8 @@ class notifay extends Model
     protected $fillable = [
     'admin_id',
     'content',
-    'noty'
+    'noty',
+    'name'
 
     ];
 }
