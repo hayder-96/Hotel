@@ -18,6 +18,7 @@ class cancel extends JsonResource
 
         return [
 
+            'id'=>$this->id,
             'name'=>$this->name,
             'content'=>$this->content,
             'created_at'=>$this->created_at->format('d/m/Y H:i:s'),

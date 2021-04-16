@@ -167,7 +167,7 @@ Route::middleware('admin:admin')->group(function(){
 
 
    
-
+    Route::get('getcan/{id}',[CancelController::class,'index']);
 
 
 
