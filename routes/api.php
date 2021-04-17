@@ -173,6 +173,16 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
+    Route::get('getopenall',[NotifayController::class,'getopenall']);
+
+
+
+    Route::get('getopenyes',[NotifayController::class,'getopenyes']);
+
+
+
+
+
 });
 
 

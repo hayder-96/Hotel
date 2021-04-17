@@ -49,6 +49,8 @@ class NotifayController extends BaseController
 
     }
 
+
+
     public function indexxxx()
     {
         
@@ -58,6 +60,52 @@ class NotifayController extends BaseController
         return $this->Respone(noty::collection($hotel),200);
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function getopenall()
+    {
+        
+
+        $hotel=notifay::all()->where('admin_id',null)->where('noty','open');
+
+        return $this->Respone(noty::collection($hotel),200);
+
+    }
+
+
+
+    public function getopenyes()
+    {
+        
+
+        $hotel=notifay::all()->where('admin_id',Auth::id())->where('noty','open');
+
+        return $this->Respone(noty::collection($hotel),200);
+
+    }
+
+
+
+
 
 
 
