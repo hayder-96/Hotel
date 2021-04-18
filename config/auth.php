@@ -55,11 +55,11 @@ return [
         ],
 
 
-        'controll' => [
-            'driver' => 'passport',
-            'provider' => 'contr',
-          //  'hash' => false,
-        ],
+        // 'controll' => [
+        //     'driver' => 'passport',
+        //     'provider' => 'contr',
+        //   //  'hash' => false,
+        // ],
     ],
 
     /*
@@ -93,10 +93,10 @@ return [
 
 
 
-        'contr' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Controller::class,
-        ],
+        // 'contr' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\Controller::class,
+        // ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
