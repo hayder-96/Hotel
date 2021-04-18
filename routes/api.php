@@ -98,8 +98,9 @@ Route::middleware('contr:controll')->group(function(){
 
 
 
+//,'throttle:rate_limit,1'
 
-Route::middleware('admin:admin','throttle:rate_limit,1')->group(function(){
+Route::middleware('admin:admin')->group(function(){
 
 
     Route::resource('hotel',InformHotelController::class);
