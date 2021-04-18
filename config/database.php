@@ -50,7 +50,7 @@ return [
         
    'mysql' => [
         'driver' => 'mysql',
-        'host' => 'us-cdbr-east-03.cleardb.com',
+        'host' => 'us-mm-auto-dca-03-b.cleardb.net',
         'database' => 'heroku_e2694fcd1952c58',
         'username' => 'bdc292e464a9cb',
         'password' => 'b3742bde',
