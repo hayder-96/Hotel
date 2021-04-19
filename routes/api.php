@@ -151,7 +151,7 @@ Route::middleware('admin:admin')->group(function(){
 
 
 
-    Route::resource('notycon',NotifayController::class);
+    Route::resource('notycon',NotifayController::class)->middleware('throttle:60,1');
     
 
     Route::get('getnotyconyes',[NotifayController::class,'indexx']);
