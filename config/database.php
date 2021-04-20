@@ -51,9 +51,9 @@ return [
    'mysql' => [
         'driver' => 'mysql',
         'host' => 'us-mm-auto-dca-03-b.cleardb.net',
-        'database' => 'heroku_e2694fcd1952c58',
-        'username' => 'bdc292e464a9cb',
-        'password' => 'b3742bde',
+        'database' => 'heroku_6273859a3c509ec',
+        'username' => 'b267013ea152af',
+        'password' => '32df41a7 ',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
         'prefix' => '',
